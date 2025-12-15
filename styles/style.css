@@ -25,20 +25,10 @@ html {
   margin: 133px 36.52px 138px 50px;
 }
 
-/*Каждый элемент списка (ссылка меню)*/
-.header__links-list-item {
-
-}
-
 /*Элемент списка без кружочка слева (ссылка меню)*/
 .header__links-list-item_no-bullit {
   list-style-type: none;
   padding-left: 0px;
-}
-
-/*Все ссылки в шапке профиля*/
-.header__link {
-
 }
 
 /*Активная ссылка. Нет нижнего подчёркивания*/
@@ -329,8 +319,6 @@ html {
   font-size: 20px;
 }
 
-
-
 .footer {
   margin-top: 180px;
   width: 1100px;
@@ -353,11 +341,6 @@ html {
   margin-bottom: 82px;
 }
 
-/*блок навигации по списку ссылок*/
-.footer_menu {
-
-}
-
 /*список пунктов меню*/
 .footer__menu-list {
   list-style-type: none;
@@ -369,11 +352,6 @@ html {
 /*Пункт списка меню*/
 .footer__menu-list-item {
   text-align: center;
-
-}
-
-/*Ссылка меню*/
-.footer__menu-link {
 
 }
 
@@ -390,16 +368,6 @@ html {
   list-style-type: none;
   margin-right: 50px;
   margin-bottom: 131px;;
-
-}
-
-/*Пункт списка ссылок на социальные сети*/
-.footer__social-list-item {
-
-}
-
-/*Ссылка на социальные сети*/
-.footer__social-link {
 
 }
 
