@@ -39,13 +39,13 @@
       <!-- Обложка страницы -->
       <section class="cover overlay">
         <h1 class="cover__title">
-          <span class="aligned-text">ОНО</span> 
-          <span class="aligned-text_center">ТЕБЕ</span> 
+          <span class="aligned-text">ОНО</span>
+          <span class="aligned-text_center">ТЕБЕ</span>
           <span class="aligned-text_right">НАДО</span>
         </h1>
         <div class="description">
           <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
-          <button class="bet-button">Сделать ставку</button>
+          <button disabled class="bet-button">Сделать ставку</button>
         </div>
 
       </section>
@@ -105,12 +105,14 @@
         
       </section>
       <section class="about">
-        <div class="circle">
-          <img src="/images/logo-white.svg" alt="">
+        <div class="about__column_1" >
+          <div class="about__logo">
+            <img src="/images/logo-white.svg" alt="" class="about__logo-image">
+          </div>
         </div>
-        <div>
-          <h2>Об аукционе</h2>
-          <span>
+        <div class="about__column">
+          <h2 class="about__title">Об аукционе</h2>
+          <span class="about__text">
             <p>
               Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. 
               Наши лоты вообще не должны были попасть ни на один аукцион. 
@@ -127,7 +129,6 @@
               Когда в эти вещи не верил никто, продолжали верить их создатели.
               И сейчас эти лоты стали культовыми. 
             </p>
-            
           </span>
         </div>
         
