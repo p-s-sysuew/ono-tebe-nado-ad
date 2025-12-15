@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.body {
-  
-
-}
 
 .header {
   display: grid;
@@ -14,19 +10,18 @@ html {
   align-items: center;
 
   /*Описание шрифта*/
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-size: 18px;
 }
 
 /*Список ссылок в меню шапки профиля*/
 .header__links-list {
-  
   display: flex;
   /*расстояние между элементами*/
   column-gap: 31.48px;
   list-style: circle;
-  justify-content : space-between;
+  justify-content: space-between;
   margin: 133px 36.52px 138px 50px;
 }
 
@@ -34,7 +29,6 @@ html {
 .header__links-list-item {
 
 }
-
 
 /*Элемент списка без кружочка слева (ссылка меню)*/
 .header__links-list-item_no-bullit {
@@ -44,15 +38,16 @@ html {
 
 /*Все ссылки в шапке профиля*/
 .header__link {
+
 }
 
 /*Активная ссылка. Нет нижнего подчёркивания*/
 .header__link_active {
-  text-decoration: none
+  text-decoration: none;
 }
 
 /*Логотип*/
-.header__logo{
+.header__logo {
   display: block;
   width: 148px;
   height: 105px;
@@ -71,18 +66,15 @@ html {
   max-width: 240px;
   justify-self: end;
   margin: 95px 50px 100px 184px;
-  
 }
 
 .main {
   position: relative;
-  
-
 }
 
 .cover {
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   height: 757px;
   color: white;
@@ -93,7 +85,7 @@ html {
 
 /* Оверлей через псевдоэлемент */
 .cover.overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -122,7 +114,6 @@ html {
 
 .aligned-text {
   align-self: start;
-
 }
 
 .aligned-text_center {
@@ -131,7 +122,6 @@ html {
 
 .aligned-text_right {
   align-self: end;
-
 }
 
 .description {
@@ -165,9 +155,6 @@ html {
   margin: 0;
 }
 
-
-
-
 /*Секция с карточками*/
 .lots {
   margin: 180px 24px 120px 24px;
@@ -176,7 +163,7 @@ html {
 
 /*Заголовок секции*/
 .lots__heading {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 40px;
   font-weight: 700;
   font-style: normal;
@@ -192,25 +179,20 @@ html {
   gap: 25px;
   min-height: 596px;
   margin-top: 27px;
-
 }
 
 /*Пункт списка карточек*/
 .lots__card-list-item {
   width: 334px;
-
 }
 
 /*Ссылка, обрамляющая карточку*/
 .card-link {
   height: 100%;
-  
-
 }
 
 /*Карточка*/
 .card {
-  
   position: relative;
   height: 596px;
   display: flex;
@@ -218,14 +200,13 @@ html {
   align-items: center;
   flex-direction: column;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   color: white;
-  
 }
 
 .card.overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -285,12 +266,11 @@ html {
   margin-top: 30px;
   padding-left: 40px;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
 }
-
 
 /*Вся секция*/
 .about {
@@ -324,19 +304,16 @@ html {
   display: block;
   width: 148px;
   height: 114px;
-
 }
 
 /*Заголовое секции*/
 .about__title {
   margin-top: 133px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-style: noramal;
   font-size: 40px;
   text-transform: uppercase;
-
-
 }
 
 /*Текст для параграфов*/
@@ -346,29 +323,89 @@ html {
   flex-direction: column;
   gap: 24px;
   grid-column: 2;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
 }
 
-.circle {
-    
-}
+
 
 .footer {
   margin-top: 180px;
   width: 1100px;
   height: 180px;
 
+  display: flex;
+  justify-content: space-between;
+
+  /*Описание шрифта*/
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 18px;
 }
 
 .footer_adress {
+  max-width: 240px;
 
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-bottom: 82px;
 }
 
+/*блок навигации по списку ссылок*/
 .footer_menu {
 
 }
 
+/*список пунктов меню*/
+.footer__menu-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+/*Пункт списка меню*/
+.footer__menu-list-item {
+  text-align: center;
+
+}
+
+/*Ссылка меню*/
+.footer__menu-link {
+
+}
+
+/*Активная ссылка меню (без подчёркивания)*/
+.footer__menu-link_active {
+  text-decoration: none;
+
+}
+
+/*Список ссылок на социальные сети*/
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+  list-style-type: none;
+  margin-right: 50px;
+  margin-bottom: 131px;;
+
+}
+
+/*Пункт списка ссылок на социальные сети*/
+.footer__social-list-item {
+
+}
+
+/*Ссылка на социальные сети*/
+.footer__social-link {
+
+}
+
+/*Иконка социальной сети*/
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
+
+}
