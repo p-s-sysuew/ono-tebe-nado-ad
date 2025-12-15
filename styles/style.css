@@ -1,21 +1,9 @@
-@font-face {
-    src: url(../fonts/Raleway-Regular.woff) format('woff'),
-         url(../fonts/Raleway-Regular.woff2) format('woff2');
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-style: normal;
+html {
+  scroll-behavior: smooth;
 }
-
-@font-face {
-    src: url(../fonts/Raleway-Bold.woff) format('woff'),
-         url(../fonts/Raleway-Bold.woff2) format('woff2');
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-style: normal;
-}
-
 
 .body {
+  
 
 }
 
@@ -24,41 +12,53 @@
   height: 293px;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
+
   /*Описание шрифта*/
-  font-family: Relevay;
-  font-style: Regular;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-size: 18px;
 }
 
+/*Список ссылок в меню шапки профиля*/
 .header__links-list {
-  width: 391.48px;
-  gap: 31.48px;
-  margin: 133px 0px 138px 50px;
+  
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /*расстояние между элементами*/
+  column-gap: 31.48px;
   list-style: circle;
-  height: 22px;
+  justify-content : space-between;
+  margin: 133px 36.52px 138px 50px;
 }
 
+/*Каждый элемент списка (ссылка меню)*/
 .header__links-list-item {
-  text-decoration: underline;
-  padding-left: 13.48px;
+
 }
 
+
+/*Элемент списка без кружочка слева (ссылка меню)*/
 .header__links-list-item_no-bullit {
   list-style-type: none;
   padding-left: 0px;
-  text-decoration: none; 
-
 }
 
+/*Все ссылки в шапке профиля*/
+.header__link {
+}
+
+/*Активная ссылка. Нет нижнего подчёркивания*/
+.header__link_active {
+  text-decoration: none
+}
+
+/*Логотип*/
 .header__logo{
   display: block;
   width: 148px;
   height: 105px;
 }
 
+/*Изображение в логотипе*/
 .header__logo-image {
   display: block;
   width: auto;
@@ -66,55 +66,229 @@
   margin: 0 0;
 }
 
+/*Контактная информация*/
 .header__adress {
   max-width: 240px;
   justify-self: end;
-  margin: 95px 50px 100px auto;
+  margin: 95px 50px 100px 184px;
   
 }
 
 .main {
+  position: relative;
+  
 
 }
 
 .cover {
-  background-image: url(../images/cover.jpg);
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
   height: 757px;
+  color: white;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
+/* Оверлей через псевдоэлемент */
+.cover.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1; /* Оверлей над фоном */
+}
+
+.cover__title {
+  position: relative;
+  /*Описание шрифта*/
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 114.99999999999999%;
+  letter-spacing: 0.3em;
+  gap: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 165px 50px 106px 50px;
+  z-index: 2;
+}
+
+.aligned-text {
+  align-self: start;
+
+}
+
+.aligned-text_center {
+  align-self: center;
+}
+
+.aligned-text_right {
+  align-self: end;
 
 }
 
 .description {
-
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 50px;
+  z-index: 2;
 }
 
+.cover__description-text {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  word-spacing: 0.9em;
+  margin: 0;
+}
+
+.bet-button {
+  color: white;
+  font-size: 22px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  background: transparent;
+  width: 256px;
+  height: 51px;
+  padding: 0px;
+  margin: 0;
+}
+
+
+
+
+/*Секция с карточками*/
 .lots {
-  margin: 180px 24px 24px 24px;
+  margin: 180px 24px 120px 24px;
   width: 1052px;
-  height: 595px;
 }
 
+/*Заголовок секции*/
 .lots__heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+/*Список карточек*/
+.lots__card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  min-height: 596px;
+  margin-top: 27px;
 
 }
 
-.lots__card-list {
+/*Пункт списка карточек*/
+.lots__card-list-item {
+  width: 334px;
 
+}
+
+/*Ссылка, обрамляющая карточку*/
+.card-link {
+  height: 100%;
+  
+
+}
+
+/*Карточка*/
+.card {
+  
+  position: relative;
+  height: 596px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: white;
+  
+}
+
+.card.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.card__title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: solid;
+
+  width: 254px;
+  margin: 48px 40px 0px 40px;
+
+  z-index: 2;
+}
+
+.card__text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 120%;
+
+  width: 254px;
+  margin: 0px 40px 48px 40px;
+
+  z-index: 2;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding-left: 40px;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
 
 .about {
